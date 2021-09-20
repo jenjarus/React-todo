@@ -13,18 +13,27 @@ export default class App extends Component {
   }
 
   addTask = (task) => {
+    if (this.state.tasks.length) {
+      task.id = this.state.tasks[this.state.tasks.length - 1].id + 1;
+    } else {
+      task.id = 0;
+    }
     this.setState({tasks: [...this.state.tasks, task]});
   };
 
   checkboxDone = (id) => {
     let stateTasks = this.state.tasks;
-    stateTasks[id].done = !stateTasks[id].done;
+    stateTasks.filter(el => {
+      if(el.id === id)
+        el.done = !el.done
+     }
+    );
     this.setState({tasks: stateTasks});
   };
 
   delTask = (id) => {
     let stateTasks = this.state.tasks;
-    stateTasks.splice(id, 1);
+    stateTasks = stateTasks.filter(el => el.id !== id);
     this.setState({tasks: stateTasks});
   };
 

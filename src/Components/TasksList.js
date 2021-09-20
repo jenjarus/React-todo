@@ -3,9 +3,8 @@ import React from 'react';
 const TasksList = ({tasks, checkboxDone, delTask}) => {
     return (
         <ul>
-            {tasks.map((el, i) =>
+            {tasks.map((el) =>
                 <TasksListItem
-                    id={i}
                     task={el}
                     checkboxDone={checkboxDone}
                     delTask={delTask}
@@ -15,14 +14,14 @@ const TasksList = ({tasks, checkboxDone, delTask}) => {
     );
 };
 
-const TasksListItem = ({id, task, checkboxDone, delTask}) => {
+const TasksListItem = ({task, checkboxDone, delTask}) => {
     const classNameDone = task.done ? 'done' : '';
 
     return (
-        <li key={id}>
-            <input type="checkbox" checked={task.done} onChange={() => checkboxDone(id)} />
+        <li key={task.id}>
+            <input type="checkbox" checked={task.done} onChange={() => checkboxDone(task.id)} />
             <span className={classNameDone}>{task.text}</span>
-            <button onClick={() => delTask(id)}>Удалить</button>
+            <button onClick={() => delTask(task.id)}>Удалить</button>
         </li>
     );
 };
