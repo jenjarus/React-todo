@@ -16,9 +16,10 @@ const TasksList = ({tasks, checkboxDone, delTask}) => {
 
 const TasksListItem = ({task, checkboxDone, delTask}) => {
     const classNameDone = task.done ? 'done' : '';
+    const styleShow = {display: 'none'};
 
     return (
-        <li key={task.id}>
+        <li style={!task.show ? styleShow : {}} key={task.id}>
             <input type="checkbox" checked={task.done} onChange={() => checkboxDone(task.id)} />
             <span className={classNameDone}>{task.text}</span>
             <button onClick={() => delTask(task.id)}>Удалить</button>

@@ -12,7 +12,8 @@ export default class Form extends Component {
         e.preventDefault();
         const newTask = {
             text: this.state.text,
-            done: false
+            done: false,
+            show: true,
         };
         this.props.addTask(newTask);
     };

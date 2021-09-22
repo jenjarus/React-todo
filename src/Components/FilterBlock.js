@@ -1,11 +1,11 @@
 import React from 'react';
 
-const FilterBlock = ({delDoneTask}) => {
+const FilterBlock = ({showAllTask, showDoneTask, showActiveTask, delDoneTask}) => {
     return (
         <div>
-            <button>Показать все</button>
-            <button>Показать активные</button>
-            <button>Показать выполненые</button>
+            <button onClick={showAllTask}>Показать все</button>
+            <button onClick={showActiveTask}>Показать активные</button>
+            <button onClick={showDoneTask}>Показать выполненые</button>
             <button onClick={delDoneTask}>Очистить выполненые</button>
         </div>
     );

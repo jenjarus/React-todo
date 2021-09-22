@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73f331ec-0a78-4335-9de6-76c0421bf122" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FilterBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FilterBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/TasksList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TasksList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +87,9 @@
       <workItem from="1632041733153" duration="10883000" />
       <workItem from="1632087732198" duration="104000" />
       <workItem from="1632122933177" duration="17000" />
-      <workItem from="1632160383434" duration="2742000" />
+      <workItem from="1632160383434" duration="4547000" />
+      <workItem from="1632210358815" duration="4000" />
+      <workItem from="1632340117002" duration="1695000" />
     </task>
     <servers />
   </component>
