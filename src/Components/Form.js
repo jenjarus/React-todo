@@ -26,7 +26,7 @@ export default class Form extends Component {
         return (
             <form className={"form-group"} onSubmit={this.handleTask}>
                 <input type="text" value={this.state.text} onChange={this.handleTextTask} />
-                <button>Добавить</button>
+                <button className={'btn'}>Добавить</button>
             </form>
         );
     }

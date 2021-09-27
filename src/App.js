@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Form from './Components/Form';
 import FilterBlock from './Components/FilterBlock';
 import TasksList from './Components/TasksList';
-import './App.css';
+import './style/reset.css'
+import './style/style.scss'
 
 export default class App extends Component {
   constructor(props) {
@@ -33,15 +34,17 @@ export default class App extends Component {
   };
 
   delTask = (id) => {
-    let stateTasks = this.state.tasks;
-    stateTasks = stateTasks.filter(el => el.id !== id);
-    this.setState({tasks: stateTasks});
+    this.setState(prevState => (
+          {tasks: prevState.tasks.filter(el => el.id !== id)}
+        )
+    );
   };
 
   delDoneTask = () => {
-    let stateTasks = this.state.tasks;
-    stateTasks = stateTasks.filter(el => el.done !== true);
-    this.setState({tasks: stateTasks});
+    this.setState(prevState => (
+          {tasks: prevState.tasks.filter(el => el.done !== true)}
+        )
+    );
   };
 
   showAllTask = () => {
@@ -88,21 +91,41 @@ export default class App extends Component {
   };
 
   render() {
+    const date = new Date();
     return (
-        <div>
-          <Form addTask={this.addTask} />
-          <FilterBlock
-              showAllTask={this.showAllTask}
-              showDoneTask={this.showDoneTask}
-              showActiveTask={this.showActiveTask}
-              delDoneTask={this.delDoneTask}
-          />
-          <TasksList
-              tasks={this.state.tasks}
-              checkboxDone={this.checkboxDone}
-              delTask={this.delTask}
-          />
-        </div>
+        <>
+          <header>
+            <div className="container">
+              <div className={'header'}>
+                <div className="title"><span className="red">TO</span>-DO</div>
+              </div>
+            </div>
+          </header>
+          <main>
+            <div className="container">
+              <Form addTask={this.addTask} />
+              <FilterBlock
+                  filter={this.state.filter}
+                  showAllTask={this.showAllTask}
+                  showDoneTask={this.showDoneTask}
+                  showActiveTask={this.showActiveTask}
+                  delDoneTask={this.delDoneTask}
+              />
+              <TasksList
+                  tasks={this.state.tasks}
+                  checkboxDone={this.checkboxDone}
+                  delTask={this.delTask}
+              />
+            </div>
+          </main>
+          <footer>
+            <div className="container">
+              <div className="footer">
+                <div className="copy">©Jenjarus <span className="year">{date.getFullYear()}</span></div>
+              </div>
+            </div>
+          </footer>
+        </>
     );
   }
 }

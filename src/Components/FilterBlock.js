@@ -1,12 +1,12 @@
 import React from 'react';
 
-const FilterBlock = ({showAllTask, showDoneTask, showActiveTask, delDoneTask}) => {
+const FilterBlock = ({filter, showAllTask, showDoneTask, showActiveTask, delDoneTask}) => {
     return (
-        <div>
-            <button onClick={showAllTask}>Показать все</button>
-            <button onClick={showActiveTask}>Показать активные</button>
-            <button onClick={showDoneTask}>Показать выполненые</button>
-            <button onClick={delDoneTask}>Очистить выполненые</button>
+        <div className={'btns'}>
+            <button onClick={showAllTask} className={`btn ${filter === 'all' ? 'active' : ''}`}>Показать все</button>
+            <button onClick={showActiveTask} className={`btn ${filter === 'active' ? 'active' : ''}`}>Показать активные</button>
+            <button onClick={showDoneTask} className={`btn ${filter === 'done' ? 'active' : ''}`}>Показать выполненые</button>
+            <button onClick={delDoneTask} className={'btn'}>Очистить выполненые</button>
         </div>
     );
 };
