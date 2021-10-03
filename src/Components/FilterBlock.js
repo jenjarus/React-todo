@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { showAllTask, showActiveTask, showDoneTask, delDoneTask } from '../actions'
 
 const FilterBlock = ({filter, showAllTask, showDoneTask, showActiveTask, delDoneTask}) => {
     return (
@@ -11,4 +13,16 @@ const FilterBlock = ({filter, showAllTask, showDoneTask, showActiveTask, delDone
     );
 };
 
-export default FilterBlock;
+function mapStateToProps(state) {
+    return {
+        filter: state.filter,
+    }
+}
+const mapDipatchToProps = {
+    showAllTask,
+    showActiveTask,
+    showDoneTask,
+    delDoneTask,
+};
+
+export default connect(mapStateToProps, mapDipatchToProps)(FilterBlock)

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="73f331ec-0a78-4335-9de6-76c0421bf122" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/FilterBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FilterBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Form.js" afterDir="false" />
@@ -33,7 +33,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1yJePYVViFI23cZfJId6VddsUZZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -42,6 +44,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -96,6 +99,13 @@
       <workItem from="1632659500746" duration="1344000" />
       <workItem from="1632681915964" duration="4357000" />
       <workItem from="1632736238327" duration="5000" />
+      <workItem from="1632780727260" duration="195000" />
+      <workItem from="1633197658048" duration="3883000" />
+      <workItem from="1633203821542" duration="4510000" />
+      <workItem from="1633208585039" duration="1144000" />
+      <workItem from="1633210671509" duration="431000" />
+      <workItem from="1633248337074" duration="6450000" />
+      <workItem from="1633259930315" duration="16247000" />
     </task>
     <servers />
   </component>

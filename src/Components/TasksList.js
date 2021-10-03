@@ -1,30 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import TasksListItem from './TasksListItem'
 
-const TasksList = ({tasks, checkboxDone, delTask}) => {
+const TasksList = ({tasks}) => {
     return (
         <ul className={'result'}>
-            {tasks.map((el) =>
-                <TasksListItem
-                    task={el}
-                    checkboxDone={checkboxDone}
-                    delTask={delTask}
-                />
+            {tasks.map((el) =>{
+                return <TasksListItem
+                    key={el.id}
+                    id={el.id}
+                    text={el.text}
+                    done={el.done}
+                    show={el.show}
+                />}
             )}
         </ul>
     );
 };
 
-const TasksListItem = ({task, checkboxDone, delTask}) => {
-    const classNameDone = task.done ? 'done' : '';
-    const styleShow = {display: 'none'};
+function mapStateToProps(state) {
+    return {
+        tasks: state.tasks
+    }
+}
 
-    return (
-        <li style={!task.show ? styleShow : {}} key={task.id}>
-            <input type="checkbox" checked={task.done} onChange={() => checkboxDone(task.id)} />
-            <span className={classNameDone}>{task.text}</span>
-            <button onClick={() => delTask(task.id)} className={'btn close'}>x</button>
-        </li>
-    );
-};
-
-export default TasksList;
+export default connect(mapStateToProps)(TasksList)
